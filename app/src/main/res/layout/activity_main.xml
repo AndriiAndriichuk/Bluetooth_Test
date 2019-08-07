@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        tools:context=".activity.MainActivity">
+
+    <TextView
+            android:id="@+id/statusBluetoothTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textColor="#000"/>
+
+    <ImageView
+            android:id="@+id/bluetoothIv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+    <Button
+            android:id="@+id/onBtn"
+            android:minWidth="200dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Turn On"
+            style="@style/Base.Widget.AppCompat.Button.Colored"/>
+
+    <Button
+            android:id="@+id/offBtn"
+            android:minWidth="200dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Turn Off"
+            style="@style/Base.Widget.AppCompat.Button.Colored"/>
+
+    <Button
+            android:id="@+id/discoverableBtn"
+            android:minWidth="200dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Discoverable"
+            style="@style/Base.Widget.AppCompat.Button.Colored"/>
+
+    <Button
+            android:id="@+id/btnScan"
+            android:minWidth="200dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Scan"
+            style="@style/Base.Widget.AppCompat.Button.Colored"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <EditText
+                android:id="@+id/editWriteData"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Some text"/>
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+            <Button
+                    android:id="@+id/writeData"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Write data"
+                    style="@style/Base.Widget.AppCompat.Button.Colored"/>
+
+            <Button
+                    android:id="@+id/sendFile"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Send File"
+                    style="@style/Base.Widget.AppCompat.Button.Colored"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/recyclerViewPairedDevices">
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>
